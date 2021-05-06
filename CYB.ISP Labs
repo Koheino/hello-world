@@ -1,0 +1,9 @@
+def salted_password(password, salt):
+
+    import binascii
+
+    import os, hashlib
+
+    hashed_salted_password=hashlib.sha256(salt + password.encode()).hexdigest()
+
+    return (hashed_salted_password).decode('utf-8')
